@@ -326,6 +326,7 @@ you should place your code here."
   ;;   (defalias #'forward-evil-word #'forward-evil-symbol))
   (setq-default enh-ruby-deep-indent-paren nil)
   (add-to-list 'auto-mode-alist '("\\.coffee.erb\\'" . coffee-mode))
+  (setq ruby-insert-encoding-magic-comment nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
