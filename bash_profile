@@ -32,3 +32,8 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 export NVM_DIR="/Users/nsalisbury/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+### pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
