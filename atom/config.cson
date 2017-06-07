@@ -1,0 +1,23 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "chester-atom-syntax"
+    ]
+  editor:
+    fontSize: 15
+  "exception-reporting":
+    userId: "2a185de8-6ff0-4df7-ad78-cd5a4c0814c2"
+  "git-diff":
+    showIconsInEditorGutter: true
+  welcome:
+    showOnStartup: false
+".gemfile.ruby.source":
+  editor:
+    showIndentGuide: false
+    showInvisibles: false
+".ruby.source":
+  editor:
+    showIndentGuide: false
+    showInvisibles: false
