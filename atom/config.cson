@@ -2,8 +2,8 @@
   core:
     telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
-      "chester-atom-syntax"
+      "spacegray-dark-ui"
+      "oceanic-next"
     ]
   editor:
     fontSize: 15
