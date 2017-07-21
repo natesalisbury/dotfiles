@@ -1,0 +1,35 @@
+# Use separate file for user information
+[include]
+	path = ~/.gitconfig.local
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = true
+[alias]
+	ap = add -p
+	b = branch
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f "
+	ci = commit
+	ciam = commit --am -C HEAD
+	co = checkout
+	d  = diff --find-renames --find-copies
+	db = diff -b --find-renames --find-copies
+	dbc = diff -b --cached --find-renames --find-copies
+	dc = diff --cached --find-renames --find-copies
+	fu = commit --fixup
+	l = log --stat
+	lgr = log --graph --abbrev-commit --oneline
+	lm  = log --merge --left-right -p
+	lol = log --oneline
+	lps = log -p --stat
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	prp = !git pull --rebase && git push
+	ri = rebase -i
+	rir = !sh -c 'git rev-parse :\"$*\" | xargs printf "%s^" | /usr/bin/xargs -o git rebase -i' $*
+	sb = show-branch
+	st = status
+	authors = shortlog -s -n
+[push]
+	default = simple
+[fetch]
+	prune = true
