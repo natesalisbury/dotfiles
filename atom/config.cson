@@ -1,16 +1,27 @@
 "*":
   core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "github"
+    ]
+    projectHome: "/Users/nsalisbury/dev"
     telemetryConsent: "no"
     themes: [
       "spacegray-dark-ui"
-      "oceanic-next"
+      "one-dark-syntax"
     ]
+    titleBar: "custom"
   editor:
-    fontSize: 15
+    fontSize: 16
   "exception-reporting":
     userId: "2a185de8-6ff0-4df7-ad78-cd5a4c0814c2"
   "git-diff":
     showIconsInEditorGutter: true
+  "linter-eslint":
+    showRuleIdInMessage: false
+  "linter-ui-default":
+    panelHeight: 66
+    showPanel: true
   welcome:
     showOnStartup: false
 ".gemfile.ruby.source":
