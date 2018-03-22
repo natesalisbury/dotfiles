@@ -34,3 +34,14 @@ complete -C '/usr/local/bin/aws_completer' aws
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+### mysql
+MYSQL=/usr/local/mysql/bin
+export PATH=$PATH:$MYSQL
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# DynamoDB Local
+function dynamo() {
+  cd ~/dev/dynamolocal
+  java -Djava.library.path=./DynamoDBLocal_lib/ -jar DynamoDBLocal.jar -dbPath ./ &
+}
