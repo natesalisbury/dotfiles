@@ -7,12 +7,14 @@
     projectHome: "/Users/nsalisbury/dev"
     telemetryConsent: "no"
     themes: [
-      "spacegray-dark-ui"
-      "one-dark-syntax"
+      "one-light-ui"
+      "twilight-syntax"
     ]
     titleBar: "custom"
   editor:
+    fontFamily: "menlo"
     fontSize: 17
+    scrollPastEnd: true
   "exception-reporting":
     userId: "2a185de8-6ff0-4df7-ad78-cd5a4c0814c2"
   "git-diff":
