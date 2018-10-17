@@ -24,6 +24,8 @@
   "linter-ui-default":
     panelHeight: 66
     showPanel: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".gemfile.ruby.source":

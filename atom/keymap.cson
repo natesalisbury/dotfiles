@@ -33,3 +33,5 @@
 
 '.platform-darwin atom-text-editor':
   'ctrl-q': 'autoflow:reflow-selection'
+'.platform-darwin atom-workspace':
+  'shift-cmd-T': 'unset!'
