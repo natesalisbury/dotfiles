@@ -11,6 +11,7 @@
       "twilight-syntax"
     ]
     titleBar: "custom"
+    useTreeSitterParsers: false
   editor:
     fontFamily: "menlo"
     fontSize: 17
