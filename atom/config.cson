@@ -4,6 +4,7 @@
     disabledPackages: [
       "github"
     ]
+    followSymlinks: false
     projectHome: "/Users/nsalisbury/dev"
     telemetryConsent: "no"
     themes: [
