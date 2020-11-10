@@ -23,7 +23,7 @@ export MANPATH=/usr/local/git/man:/opt/local/man:$MANPATH
 alias ll='ls -lG'
 alias la='ls -laG'
 alias be='bundle exec'
-alias weather='function _weather(){ curl http://wttr.in/${1:-84043}; };_weather'
+alias weather='function _weather(){ curl http://wttr.in/${1:-lehi,ut}; };_weather'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
