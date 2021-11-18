@@ -31,6 +31,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### AWS CLI Command Completion
 complete -C '/usr/local/bin/aws_completer' aws
 
+### PostgreSQL
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/10/bin
+
 ### pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
