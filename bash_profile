@@ -32,7 +32,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 complete -C '/usr/local/bin/aws_completer' aws
 
 ### PostgreSQL
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/10/bin
+if [ -d /Applications/Postgres.app ]; then
+  # export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+  export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/10/bin
+fi
 
 ### pyenv
 export PYENV_ROOT="$HOME/.pyenv"
