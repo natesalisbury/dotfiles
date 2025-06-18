@@ -1,0 +1,59 @@
+autoload -Uz vcs_info
+
+# Use vcs_info for Git info
+precmd() {
+  vcs_info
+}
+
+# Enable Git backend
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' actionformats '%b'
+
+# Colors
+GREEN="%F{green}"
+#BLUE="%F{blue}"
+BLUE="%F{81}"
+RESET="%f"
+
+# Git status check function
+git_status_info() {
+  local gitdir
+  gitdir=$(git rev-parse --git-dir 2>/dev/null) || return
+
+  local symbols=""
+
+  # Check for staged changes
+  staged=$(git diff --cached --name-only)
+  if [[ -n $staged ]]; then
+    symbols+="+"
+  fi
+
+  # Check for unstaged (working tree) changes
+  unstaged=$(git diff --name-only)
+  if [[ -n $unstaged ]]; then
+    symbols+="!"
+  fi
+
+  # Check for untracked files
+  if [ -n "$(git ls-files --others --exclude-standard 2>/dev/null)" ]; then
+    symbols+="?"
+  fi
+
+  # Check for stashed changes
+  if git rev-parse --verify refs/stash &>/dev/null; then
+    symbols+="$"
+  fi
+
+  [[ -n "$symbols" ]] && echo " [$symbols]"
+}
+
+# Custom prompt
+setopt PROMPT_SUBST
+PROMPT='%n@%m:${GREEN}%~${RESET}$( \
+  [[ -n ${vcs_info_msg_0_} ]] && \
+  echo " on ${BLUE}${vcs_info_msg_0_}$(git_status_info)${RESET}" \
+)
+%# '
+
