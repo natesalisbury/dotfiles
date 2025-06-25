@@ -13,7 +13,6 @@ zstyle ':vcs_info:git:*' actionformats '%b'
 
 # Colors
 GREEN="%F{green}"
-#BLUE="%F{blue}"
 BLUE="%F{81}"
 RESET="%f"
 
